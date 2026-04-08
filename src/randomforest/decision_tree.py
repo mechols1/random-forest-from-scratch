@@ -64,7 +64,6 @@ class DecisionTree:
 
     def _traverse(self, x, node):
         if node.left is None and node.right is None:
-            print("Leaf predicted class:", node.predicted_class)
             return node.predicted_class
         if x[node.feature_idx] <= node.value:
             return self._traverse(x, node.left)
